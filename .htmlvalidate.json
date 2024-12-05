@@ -1,0 +1,6 @@
+{
+  "extends": ["html-validate:a11y"],
+  "rules": {
+    "wcag/h32": "off"
+  }
+}

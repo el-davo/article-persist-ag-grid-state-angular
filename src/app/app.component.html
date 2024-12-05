@@ -1,0 +1,21 @@
+<!-- Bad grid -->
+<ag-grid-angular
+  #badGrid
+  class="ag-theme-alpine-dark"
+  appPersistGridState
+  [rowData]="data"
+  [context]="{ name: 'my-grid-1' }"
+  [columnDefs]="colDefs"
+/>
+
+<!-- Good grid -->
+<ag-grid-angular
+  class="ag-theme-alpine-dark"
+  *appLoadGridState="null; name: 'my-grid-2'; let initialState = initialState"
+  appPersistGridState
+  [initialState]="initialState"
+  [rowData]="data"
+  [context]="{ name: 'my-grid-2' }"
+  [columnDefs]="colDefs"
+  [suppressColumnMoveAnimation]="true"
+/>
